@@ -23,8 +23,8 @@
 
 Launch a credible bilingual institutional website for TNT Capital that clearly presents:
 
-- Asset Management
-- Thinking
+- Investment Management
+- Insights
 - Ventures
 - Team
 - Contact
@@ -59,6 +59,26 @@ This assumes:
 
 ---
 
+## Build Path (locked)
+
+| Stage | Tool | Role |
+|-------|------|------|
+| Visual design + page build | **Framer** | Design and assemble the site visually |
+| AI-assisted editing | **Cursor ↔ Framer** | Cursor connects to the Framer project to edit layouts, styles, CMS, and components |
+| Final production host | **WordPress** (existing TNT server) | Publish / hand off the finished site onto WordPress |
+
+How to think about the phases:
+
+1. **Phases 1–2** — Scope and content (docs + copy), independent of tools  
+2. **Phases 3–7** — Design and build in **Framer**, with Cursor connected to Framer when editing  
+3. **Phases 8–9** — Controlled check, then **publish onto the WordPress server** TNT already has  
+
+> Framer is the design/build environment. WordPress is the final destination. Do not treat Next.js/Vercel as the production path for this rollout unless TNT deliberately revises this plan later.
+
+Cursor + Framer connection (when ready): use the Framer agent setup (`npx @framer/agent@latest setup`), open a session on the TNT Framer project, then edit from Cursor. Exact connect steps can be walked through the first time you start Phase 3.
+
+---
+
 ## Phase 1 — Foundation and Scope
 
 | | |
@@ -73,8 +93,8 @@ This assumes:
 ```
 TNT Capital
 ├── Home
-├── Asset Management
-├── Thinking
+├── Investment Management
+├── Insights
 ├── Ventures
 ├── Team
 └── Contact
@@ -94,8 +114,8 @@ Both versions should use the same page structure. Content does not need to be pu
 The first launch should include:
 
 - [ ] Homepage
-- [ ] Asset Management page
-- [ ] Thinking publication library
+- [ ] Investment Management page
+- [ ] Insights publication library
 - [ ] Two existing research pieces
 - [ ] Ventures overview
 - [ ] Team page
@@ -146,13 +166,13 @@ Write:
 - [ ] Short description of TNT Capital
 - [ ] Global perspective
 - [ ] Vietnam conviction
-- [ ] Introduction to Asset Management
-- [ ] Introduction to Thinking
+- [ ] Introduction to Investment Management
+- [ ] Introduction to Insights
 - [ ] Introduction to Ventures
 - [ ] Introduction to Team
 - [ ] Final contact call to action
 
-#### Asset Management
+#### Investment Management
 
 Write:
 
@@ -166,11 +186,11 @@ Write:
 
 > The page should describe investment activity without publicly mentioning the private fund.
 
-#### Thinking
+#### Insights
 
 Prepare:
 
-- [ ] Thinking introduction
+- [ ] Insights introduction
 - [ ] Category descriptions
 - [ ] Two existing research pieces
 - [ ] Vietnam 2045
@@ -228,44 +248,41 @@ Prepare inquiry categories:
 
 ---
 
-## Phase 3 — Design System and Page Design
+## Phase 3 — Design System and Page Design (Framer)
 
 | | |
 |---|---|
 | **Estimated Duration** | Weeks 3–4 |
-| **Goal** | Create one consistent visual system before building every page independently |
+| **Goal** | Apply [`design.md`](./design.md) in Framer before finishing every page |
 
 ### Design Direction
 
-The website should feel:
+Follow [`design.md`](./design.md). The site should feel intentional, institutional, editorial, and recognizably TNT (Dark Green `#275317` hierarchy — not a generic off-white corporate look).
 
-- Minimal
-- Off-white
-- Structured
-- Modern
-- Institutional
-- Calm
-- Serious without feeling old-fashioned
+### Tooling for this phase
 
-### Create the Core Design System
+- [ ] Framer project created / confirmed for TNT Capital
+- [ ] Cursor connected to the Framer project (Framer agent session)
+- [ ] Color and text styles in Framer set from `design.md`
+- [ ] Shared components started on the Framer canvas
 
-Define:
+### Create the Core Design System in Framer
 
-- [ ] Background colors
-- [ ] Primary and secondary text colors
-- [ ] Accent color
-- [ ] Heading typography
-- [ ] Body typography
-- [ ] Spacing system
-- [ ] Button styles
-- [ ] Link styles
-- [ ] Card styles
+Define as Framer color + text styles (sourced from `design.md`):
+
+- [x] Background / section surfaces (White, TNT Mist, Soft Gray, Dark Green)
+- [x] Primary and secondary text colors
+- [x] Brand greens (Primary `#275317`, Secondary `#4D6345`, Mist `#F5FFF9`)
+- [x] Heading typography (Source Serif 4 H1–H3)
+- [x] Body typography (Source Sans 3, 18 / 17 px)
+- [x] Button and link styles (per design.md)
+- [ ] Spacing system applied consistently on canvas
 - [ ] Form styles
-- [ ] Image treatment
+- [ ] Image treatment (restrained; not fully defined in design.md)
 - [ ] Publication layout
 - [ ] Mobile navigation
 
-### Design the Main Reusable Components
+### Design the Main Reusable Components (in Framer)
 
 Create:
 
@@ -283,43 +300,45 @@ Create:
 
 ### Design Priority
 
-Design in this order:
+Design in this order in Framer:
 
 1. Homepage
 2. Article page
-3. Thinking library
-4. Asset Management
-5. Ventures
-6. Team
+3. Insights library
+4. Investment Management
+5. Venture
+6. About / Team
 7. Contact
-8. Mobile versions
+8. Mobile breakpoints
 
 ### Phase 3 Deliverables
 
-- [ ] Basic design system
-- [ ] Desktop page designs
-- [ ] Mobile page designs
-- [ ] Reusable component list
-- [ ] Final layout direction
+- [x] Basic design system (`design.md` v1.0)
+- [ ] Framer styles matching design.md
+- [ ] Desktop page frames in Framer
+- [ ] Mobile breakpoints in Framer
+- [ ] Reusable component set on canvas
+- [ ] Cursor ↔ Framer workflow confirmed
 
 ---
 
-## Phase 4 — Technical Foundation
+## Phase 4 — Technical Foundation (Framer project)
 
 | | |
 |---|---|
 | **Estimated Duration** | Week 4 |
-| **Goal** | Set up the website so it remains simple now but can grow later |
+| **Goal** | Set up Framer (and Cursor connection) so design and content stay structured before WordPress publish |
 
 ### Recommended Structure
 
-Use a modern content-based website architecture with:
+Build and iterate in **Framer**:
 
-- Reusable page components
-- Structured content collections
-- Separate English and Vietnamese content
-- A content management system
-- Clear separation between design, content, and data
+- Reusable Framer components and shared styles from `design.md`
+- Structured CMS collections where needed (publications, ventures, team)
+- Separate English and Vietnamese content paths
+- Clear separation between visual design (Framer) and final host (WordPress)
+
+Cursor assists by connecting to the Framer project — not by replacing Framer as the canvas.
 
 ### Core Content Types
 
@@ -382,31 +401,32 @@ Use a modern content-based website architecture with:
 
 The first version should avoid unnecessary backend complexity, but it should be built around:
 
-- Structured content instead of hardcoded pages
-- Reusable components
+- Structured content instead of one-off page hacks
+- Reusable Framer components
 - Language-specific content fields
 - Easy addition of new publications
 - Easy addition of ventures and team members
 - Private fields that are not shown publicly
-- Clear public and private content separation
+- A clear **Framer → WordPress** publish path at the end
 
 ### Phase 4 Deliverables
 
-- [ ] Website project created
-- [ ] Page routing established
+- [ ] Framer project ready for TNT Capital
+- [ ] Cursor ↔ Framer session working
+- [ ] Routes / pages established in Framer
 - [ ] English and Vietnamese structure established
-- [ ] Content types created
+- [ ] CMS collections created (as needed)
 - [ ] Reusable components prepared
-- [ ] Content management system connected
+- [ ] WordPress server access confirmed for later publish (credentials/host only — no build yet)
 
 ---
 
-## Phase 5 — English MVP Build
+## Phase 5 — English MVP Build (in Framer)
 
 | | |
 |---|---|
 | **Estimated Duration** | Weeks 5–6 |
-| **Goal** | Build and complete the English version first |
+| **Goal** | Complete the English site in Framer first (Cursor assists; WordPress comes later) |
 
 ### Build Order
 
@@ -429,7 +449,7 @@ The first version should avoid unnecessary backend complexity, but it should be 
 - [ ] Team introduction
 - [ ] Contact call to action
 
-#### 3. Asset Management
+#### 3. Investment Management
 
 - [ ] Overview
 - [ ] Philosophy
@@ -438,7 +458,7 @@ The first version should avoid unnecessary backend complexity, but it should be 
 - [ ] Private markets
 - [ ] Risk and decision principles
 
-#### 4. Thinking
+#### 4. Insights
 
 - [ ] Publication library
 - [ ] Category filters
@@ -496,8 +516,8 @@ The first version should avoid unnecessary backend complexity, but it should be 
 
 - [ ] Add Vietnamese navigation
 - [ ] Add Vietnamese homepage copy
-- [ ] Add Vietnamese Asset Management copy
-- [ ] Add Vietnamese Thinking introduction
+- [ ] Add Vietnamese Investment Management copy
+- [ ] Add Vietnamese Insights introduction
 - [ ] Add Vietnamese Ventures copy
 - [ ] Add Vietnamese Team copy
 - [ ] Add Vietnamese Contact copy
@@ -590,16 +610,25 @@ Review:
 
 ---
 
-## Phase 8 — Controlled Launch
+## Phase 8 — Controlled Launch (WordPress)
 
 | | |
 |---|---|
 | **Estimated Duration** | Week 9 |
-| **Goal** | Launch quietly, verify real-world behavior, and correct problems before promoting the website widely |
+| **Goal** | Move the approved Framer build onto the TNT WordPress server, launch quietly, and fix real-world issues before wide promotion |
+
+### Publish path
+
+- [ ] Freeze Framer design for launch candidate
+- [ ] Export / hand off approved pages and assets from Framer
+- [ ] Implement or import onto the **existing WordPress server**
+- [ ] Match `design.md` globals on WordPress (fonts, colors, surfaces)
+- [ ] Point staging URL at WordPress for soft-launch review
+- [ ] Only then promote the public domain
 
 ### Soft Launch
 
-Share the website with a small group of:
+Share the WordPress staging or soft-live site with a small group of:
 
 - Trusted strategic partners
 - Advisors
@@ -616,6 +645,7 @@ Ask them to review:
 - [ ] Whether any wording feels exaggerated
 - [ ] Whether the contact process works
 - [ ] Whether the bilingual experience feels natural
+- [ ] Whether Framer → WordPress visual fidelity holds
 
 ### Review Real Usage
 
@@ -631,26 +661,27 @@ Monitor:
 
 ### Phase 8 Deliverables
 
-- [ ] Live website
+- [ ] Site live on TNT WordPress server (soft launch)
 - [ ] First external feedback
 - [ ] Corrected launch issues
-- [ ] Final public version
+- [ ] Final public WordPress version ready
 
 ---
 
-## Phase 9 — Public Rollout
+## Phase 9 — Public Rollout (WordPress production)
 
 | | |
 |---|---|
 | **Estimated Duration** | Week 10 |
-| **Goal** | Begin using the website as TNT Capital's official institutional platform |
+| **Goal** | Use the WordPress site as TNT Capital's official institutional platform |
 
 ### Public Rollout Actions
 
+- [ ] Confirm production domain on WordPress
 - [ ] Announce the website through LinkedIn
 - [ ] Share the two existing research pieces
 - [ ] Publish the Vietnam 2045 page
-- [ ] Introduce the TNT Capital Doctrine
+- [ ] Introduce the Manifesto / institutional doctrine
 - [ ] Update professional profiles with the website
 - [ ] Add the website to email signatures
 - [ ] Share relevant pages directly with strategic partners
@@ -708,20 +739,19 @@ Only build these when there is a **real operational need**:
 
 ## Recommended Build Principle
 
-> Build the website as a **content platform with institutional pages**, not as a collection of manually coded static pages.
-
-The backend can remain lightweight. The important foundation is:
+> Design and build in **Framer** (with Cursor connected). Publish the finished site onto **WordPress**.
 
 | Principle | Description |
 |-----------|-------------|
-| **Structured content** | Content stored in defined types, not hardcoded HTML |
-| **Reusable components** | Consistent UI elements across all pages |
-| **Bilingual support** | English and Vietnamese content from the start |
+| **Framer first** | Visual system and pages are designed and assembled in Framer |
+| **Cursor assists Framer** | Cursor edits the connected Framer project; it is not a separate production host |
+| **WordPress last** | Final production lives on TNT’s existing WordPress server |
+| **design.md locked** | Colors, type, surfaces, and UI rules come from `design.md` |
+| **Structured content** | Prefer CMS collections over one-off page hacks |
+| **Bilingual support** | English and Vietnamese from the start |
 | **Public/private separation** | Clear control over what is visible publicly |
-| **Easy publication management** | Add articles without a developer |
-| **Easy expansion** | Add portfolio, ventures, and team without rebuilding |
 
-This gives TNT Capital a simple first website without forcing a complete rebuild as the institution grows.
+This keeps design fast while landing on the hosting TNT already owns.
 
 ---
 
@@ -731,16 +761,18 @@ This gives TNT Capital a simple first website without forcing a complete rebuild
 |-------|-------|----------|
 | **1** | Foundation and Scope | Week 1 |
 | **2** | Content Development | Weeks 2–3 |
-| **3** | Design System and Page Design | Weeks 3–4 |
-| **4** | Technical Foundation | Week 4 |
-| **5** | English MVP Build | Weeks 5–6 |
-| **6** | Vietnamese Version | Week 7 |
-| **7** | Testing and Refinement | Week 8 |
-| **8** | Controlled Launch | Week 9 |
-| **9** | Public Rollout | Week 10 |
+| **3** | Design System and Page Design **(Framer)** | Weeks 3–4 |
+| **4** | Technical Foundation **(Framer + Cursor)** | Week 4 |
+| **5** | English MVP Build **(Framer)** | Weeks 5–6 |
+| **6** | Vietnamese Version **(Framer)** | Week 7 |
+| **7** | Testing and Refinement **(Framer)** | Week 8 |
+| **8** | Controlled Launch **(→ WordPress)** | Week 9 |
+| **9** | Public Rollout **(WordPress production)** | Week 10 |
 
 ---
 
 *Document version: MVP*  
-*Last updated: June 2026*  
+*Last updated: September 2026*  
+*Build path: Framer (+ Cursor) → WordPress*  
+*Design source of truth: [`design.md`](./design.md)*  
 *TNT Capital — Internal Use*

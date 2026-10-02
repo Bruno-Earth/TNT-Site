@@ -1,0 +1,880 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>TNT Capital — About Story + Wireframe + Narrative Motion v1</title>
+<style>
+  @page { size: letter; margin: 0; }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { background: #fff; color: #202820; }
+  body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    font-size: 11px;
+    line-height: 1.45;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+  .page {
+    width: 8.5in;
+    height: 11in;
+    padding: 0.48in 0.58in 0.42in;
+    page-break-after: always;
+    position: relative;
+    overflow: hidden;
+    background: #fff;
+  }
+  .page:last-child { page-break-after: auto; }
+  .run {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    font-size: 8.5px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #5F685F;
+    border-bottom: 1px solid #DFE5DC;
+    padding-bottom: 8px;
+    margin-bottom: 22px;
+  }
+  .run b { color: #275317; font-weight: 650; }
+  h1.cover-kicker {
+    font-family: Georgia, "Times New Roman", serif;
+    font-weight: 700;
+    font-size: 13px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: #275317;
+    margin-top: 1.15in;
+  }
+  h1.cover-title {
+    font-family: Georgia, "Times New Roman", serif;
+    font-weight: 700;
+    font-size: 42px;
+    line-height: 1.05;
+    letter-spacing: -0.02em;
+    color: #275317;
+    margin-top: 14px;
+    max-width: 6.4in;
+  }
+  .cover-sub {
+    margin-top: 18px;
+    font-size: 15px;
+    color: #4D6345;
+    max-width: 5.6in;
+  }
+  .cover-rule {
+    width: 2.4in;
+    height: 2px;
+    background: #275317;
+    margin: 28px 0 16px;
+  }
+  .cover-note {
+    max-width: 5.4in;
+    font-size: 13px;
+    line-height: 1.5;
+    color: #202820;
+  }
+  .cover-foot {
+    position: absolute;
+    left: 0.58in;
+    right: 0.58in;
+    bottom: 0.48in;
+    display: flex;
+    justify-content: space-between;
+    font-size: 10px;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: #5F685F;
+  }
+  h2 {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 22px;
+    line-height: 1.15;
+    letter-spacing: -0.015em;
+    color: #275317;
+    font-weight: 700;
+  }
+  .deck {
+    margin-top: 8px;
+    max-width: 6.6in;
+    font-size: 12.5px;
+    line-height: 1.45;
+    color: #202820;
+  }
+  .lede {
+    margin-top: 6px;
+    font-size: 12px;
+    color: #4D6345;
+    font-style: italic;
+    font-family: Georgia, "Times New Roman", serif;
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 16px;
+  }
+  th {
+    text-align: left;
+    font-size: 8.5px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #5F685F;
+    font-weight: 650;
+    padding: 0 10px 6px 0;
+    border-bottom: 1px solid #275317;
+  }
+  td {
+    vertical-align: top;
+    padding: 9px 12px 9px 0;
+    border-bottom: 1px solid #DFE5DC;
+    font-size: 11px;
+    line-height: 1.4;
+  }
+  td.num {
+    width: 36px;
+    font-family: Georgia, "Times New Roman", serif;
+    color: #275317;
+    font-weight: 700;
+    font-size: 13px;
+  }
+  td.mode {
+    width: 118px;
+    color: #275317;
+    font-weight: 650;
+    letter-spacing: 0.04em;
+    font-size: 10px;
+    text-transform: uppercase;
+  }
+  .split {
+    display: grid;
+    grid-template-columns: 1.15fr 0.85fr;
+    gap: 22px;
+    margin-top: 16px;
+  }
+  .split.even { grid-template-columns: 1fr 1fr; }
+  h3 {
+    font-size: 10px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #4D6345;
+    margin-bottom: 8px;
+  }
+  .kv { width: 100%; margin-top: 0; }
+  .kv td { padding: 7px 8px 7px 0; }
+  .kv td:first-child {
+    width: 108px;
+    color: #275317;
+    font-weight: 650;
+    font-size: 10.5px;
+  }
+  .note {
+    margin-top: 14px;
+    padding-top: 10px;
+    border-top: 1px solid #E0563A;
+    font-size: 11.5px;
+    line-height: 1.45;
+    max-width: 6.8in;
+  }
+  .note strong { color: #275317; font-weight: 650; }
+  ul.clean { margin: 4px 0 0 0; padding-left: 14px; }
+  ul.clean li { margin: 3px 0; }
+  .frame {
+    border: 1px solid #DFE5DC;
+    background: #fff;
+    min-height: 250px;
+    position: relative;
+    padding: 14px 14px 12px;
+  }
+  .frame.mist { background: #F5FFF9; }
+  .frame.gray { background: #F2F5F1; }
+  .frame.dark { background: #275317; color: #F5FFF9; }
+  .frame .label {
+    font-size: 8px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: #4D6345;
+  }
+  .frame.dark .label { color: #F5FFF9; opacity: 0.8; }
+  .rule {
+    height: 2px;
+    background: #275317;
+    margin: 10px 0 12px;
+  }
+  .frame.dark .rule { background: #F5FFF9; height: 1px; opacity: 0.7; }
+  .statement {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 18px;
+    line-height: 1.15;
+    color: #275317;
+    font-weight: 700;
+    max-width: 92%;
+  }
+  .frame.dark .statement { color: #fff; }
+  .ghost {
+    margin-top: 8px;
+    height: 7px;
+    background: rgba(39, 83, 23, 0.12);
+    width: 78%;
+  }
+  .ghost.short { width: 46%; }
+  .frame.dark .ghost { background: rgba(245, 255, 249, 0.28); }
+  .cols4, .cols2, .plist {
+    display: grid;
+    gap: 8px;
+    margin-top: 14px;
+  }
+  .cols4 { grid-template-columns: repeat(4, 1fr); }
+  .cols2 { grid-template-columns: 1.3fr 0.7fr; }
+  .cell {
+    border-top: 2px solid #275317;
+    padding-top: 6px;
+    min-height: 72px;
+  }
+  .cell b, .prow b {
+    display: block;
+    font-size: 9px;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: #275317;
+    margin-bottom: 4px;
+  }
+  .cell span, .prow span {
+    display: block;
+    font-size: 10px;
+    color: #202820;
+    line-height: 1.35;
+  }
+  .portrait {
+    background: rgba(39, 83, 23, 0.08);
+    border: 1px solid rgba(39, 83, 23, 0.18);
+    min-height: 148px;
+    display: flex;
+    align-items: flex-end;
+    padding: 8px;
+    font-size: 9px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #4D6345;
+  }
+  .prow {
+    display: grid;
+    grid-template-columns: 28px 1fr;
+    gap: 8px;
+    padding: 7px 0;
+    border-bottom: 1px solid #DFE5DC;
+  }
+  .prow em {
+    font-family: Georgia, "Times New Roman", serif;
+    font-style: normal;
+    font-weight: 700;
+    color: #275317;
+  }
+  .people {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+    margin-top: 12px;
+  }
+  .person {
+    border-top: 1px solid #275317;
+    padding-top: 6px;
+  }
+  .person b, .person span { display: block; }
+  .ph {
+    height: 54px;
+    background: rgba(39, 83, 23, 0.08);
+    margin-bottom: 6px;
+  }
+  .omit {
+    border: 1px dashed #4D6345;
+    min-height: 148px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 12px;
+    color: #4D6345;
+    font-size: 11px;
+    line-height: 1.4;
+  }
+  .cta {
+    display: inline-block;
+    margin-top: 12px;
+    background: #F5FFF9;
+    color: #275317;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    padding: 7px 12px;
+  }
+  .footer-mini {
+    margin-top: 10px;
+    background: #fff;
+    color: #202820;
+    display: grid;
+    grid-template-columns: 1.4fr 1fr 1fr 1fr;
+    gap: 8px;
+    padding: 8px;
+    font-size: 8px;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+  }
+  .footer-mini div { border-top: 1px solid #DFE5DC; padding-top: 4px; }
+  .pageno {
+    position: absolute;
+    right: 0.58in;
+    bottom: 0.28in;
+    font-size: 9px;
+    letter-spacing: 0.08em;
+    color: #5F685F;
+  }
+  .chip {
+    display: inline-block;
+    font-size: 9px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #275317;
+    border: 1px solid #DFE5DC;
+    padding: 2px 6px;
+    margin-right: 4px;
+  }
+  ol.order { margin: 8px 0 0 18px; }
+  ol.order li { margin: 5px 0; padding-left: 4px; }
+  .pair { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; margin-top: 14px; }
+  .test {
+    background: #F5FFF9;
+    padding: 10px 12px;
+    margin-top: 12px;
+    font-size: 11.5px;
+    line-height: 1.45;
+  }
+  .test b { color: #275317; }
+</style>
+</head>
+<body>
+
+<section class="page">
+  <div class="run"><span><b>TNT Capital</b> / About story + wireframe + narrative motion / v1</span><span>Desktop</span></div>
+  <h1 class="cover-kicker">TNT Capital</h1>
+  <h1 class="cover-title">About Story<br>+ Wireframe<br>+ Narrative Motion</h1>
+  <p class="cover-sub">Desktop. The institution page: who TNT is, at the scale of the work.</p>
+  <div class="cover-rule"></div>
+  <p class="cover-note">This page continues the homepage. The homepage About chapter is the doorway. This page is the room. The visitor should understand the institution before they meet any person, and they should never meet a person, office, or role that does not exist.</p>
+  <div class="cover-foot"><span>English · Desktop first</span><span>Companion to Homepage v3</span></div>
+</section>
+
+<section class="page">
+  <div class="run"><span><b>TNT Capital</b> / About story + wireframe + narrative motion / v1</span><span>Desktop</span></div>
+  <h2>01 / Story map</h2>
+  <p class="deck">One continuous reading of the institution, not a team brochure and not a second homepage.</p>
+  <p class="lede">The visitor already knows the horizon. About tells them who is accountable inside it.</p>
+  <table>
+    <thead><tr><th></th><th>Section</th><th>Mode</th><th>Story job</th></tr></thead>
+    <tbody>
+      <tr><td class="num">01</td><td>Arrival</td><td class="mode">Identity</td><td>State the institution in the grammar inherited from the horizon. No second landscape.</td></tr>
+      <tr><td class="num">02</td><td>The work</td><td class="mode">Structure</td><td>Show one firm expressed as four activities. Not four products.</td></tr>
+      <tr><td class="num">03</td><td>Principles</td><td class="mode">Character</td><td>Show how TNT holds itself. Substance before scale.</td></tr>
+      <tr><td class="num">04</td><td>Founder</td><td class="mode">Accountability</td><td>Make the founder visible after the institution is clear, and secondary to it.</td></tr>
+      <tr><td class="num">05</td><td>People</td><td class="mode">Presence</td><td>Show real colleagues and advisors, or do not render the section.</td></tr>
+      <tr><td class="num">06</td><td>Invitation</td><td class="mode">Contact</td><td>Offer a present-day way to work with TNT. Not a careers page.</td></tr>
+      <tr><td class="num">07</td><td>Footer</td><td class="mode">Grounding</td><td>Resolve into the same institutional footer as the rest of the site.</td></tr>
+    </tbody>
+  </table>
+  <p class="note"><strong>Page job.</strong> Answer who is behind TNT Capital without turning the site into a personal brand, a large-firm imitation, or a manifesto. Doctrine lives on Manifesto. The long horizon lives on Vietnam 2045. Capital lives on Investment Management. Builders live on Venture. About holds identity, principles, and people.</p>
+  <span class="pageno">02</span>
+</section>
+
+<section class="page">
+  <div class="run"><span><b>TNT Capital</b> / About story + wireframe + narrative motion / v1</span><span>Desktop</span></div>
+  <h2>02 / Relationship to the homepage</h2>
+  <p class="deck">Homepage About converts atmosphere into one institutional statement. This page stays inside that conversion and goes further.</p>
+  <div class="split">
+    <div>
+      <h3>Inherited object</h3>
+      <table class="kv">
+        <tr><td>Object</td><td>The editorial rule that the homepage horizon becomes.</td></tr>
+        <tr><td>From homepage</td><td>If the visitor enters from the homepage About chapter, the white surface and the rule should feel continuous. Do not replay the landscape compression.</td></tr>
+        <tr><td>Direct visit</td><td>The rule is already settled at the top of Arrival. No cinematic prelude. The page must work with no memory of the homepage.</td></tr>
+        <tr><td>What it does here</td><td>It organizes identity, then divides into the four activities, then tightens into principles, then frames the founder.</td></tr>
+      </table>
+    </div>
+    <div>
+      <h3>What this page does not retell</h3>
+      <table class="kv">
+        <tr><td>Vietnam 2045</td><td>One sentence of conviction. The publication is the destination.</td></tr>
+        <tr><td>Manifesto</td><td>Principles here are short. Doctrine is the long form.</td></tr>
+        <tr><td>Insights</td><td>Named as a practice, not a second article rail.</td></tr>
+        <tr><td>Investing</td><td>Named as an activity. Philosophy stays on its own page.</td></tr>
+        <tr><td>Venture</td><td>Named as participation in capability still forming.</td></tr>
+      </table>
+    </div>
+  </div>
+  <p class="note"><strong>Tone.</strong> Homepage rhythm is atmosphere at the edges and clarity in the middle. About is clarity throughout. Atmosphere returns only in the closing invitation, as a low horizon on Dark Green. The page should feel slower and more still than the homepage.</p>
+  <span class="pageno">03</span>
+</section>
+
+<section class="page">
+  <div class="run"><span><b>TNT Capital</b> / About story + wireframe + narrative motion / v1</span><span>Desktop</span></div>
+  <h2>03 / Layout grammar</h2>
+  <p class="deck">Same desktop system as Homepage v3. About spends it on reading, not on pinned sequences.</p>
+  <div class="split">
+    <div>
+      <h3>Desktop grid</h3>
+      <table class="kv">
+        <tr><td>Canvas</td><td>1440 px design target. Full-bleed backgrounds only on the closing Dark Green field.</td></tr>
+        <tr><td>Content</td><td>About 1280–1320 px maximum frame.</td></tr>
+        <tr><td>Grid</td><td>12 columns. Prefer 7/5 and 8/4 over equal halves.</td></tr>
+        <tr><td>Margin</td><td>About 56–72 px.</td></tr>
+        <tr><td>Reading</td><td>Body copy stays inside 4–5 columns even when the section is wide.</td></tr>
+        <tr><td>Rule</td><td>One dominant idea per viewport.</td></tr>
+      </table>
+    </div>
+    <div>
+      <h3>Surface rhythm</h3>
+      <table class="kv">
+        <tr><td>Arrival</td><td>White. Dark Green headings. Text Ink body.</td></tr>
+        <tr><td>The work</td><td>TNT Mist.</td></tr>
+        <tr><td>Principles</td><td>Soft Gray.</td></tr>
+        <tr><td>Founder</td><td>White.</td></tr>
+        <tr><td>People</td><td>White, continuous with Founder if the section exists.</td></tr>
+        <tr><td>Invitation</td><td>Dark Green. White headings. Mist body.</td></tr>
+        <tr><td>Footer</td><td>White or Mist. No animation.</td></tr>
+      </table>
+    </div>
+  </div>
+  <p class="note"><strong>Motion budget.</strong> No pinned horizontal rail. No filtering spectacle. No recomposing image collage. Section-to-section handoff of the editorial rule is the only transformation that carries the story. Military Green is not a section fill. Koi Red is a 1 px line only, never type.</p>
+  <span class="pageno">04</span>
+</section>
+
+<section class="page">
+  <div class="run"><span><b>TNT Capital</b> / About story + wireframe + narrative motion / v1</span><span>Desktop</span></div>
+  <h2>04 / Arrival</h2>
+  <p class="lede">Who we are — the institution, already in structure.</p>
+  <div class="split">
+    <div>
+      <div class="frame">
+        <div class="label">About</div>
+        <div class="rule"></div>
+        <div class="statement">The institution behind the horizon.</div>
+        <div class="ghost"></div>
+        <div class="ghost short"></div>
+        <div class="ghost" style="width:62%; margin-top:14px;"></div>
+        <div class="ghost short"></div>
+      </div>
+      <p class="note" style="border:0; padding:0; margin-top:10px;">Label in columns 1–2. Statement from column 3 toward column 10. Body beneath, max 5 columns. No photograph.</p>
+    </div>
+    <div>
+      <table class="kv">
+        <tr><td>Height</td><td>About 90–105 svh. Enough for the rule to be read as structure before the statement.</td></tr>
+        <tr><td>Surface</td><td>White.</td></tr>
+        <tr><td>Imagery</td><td>None. The rule is the visual memory of the horizon.</td></tr>
+        <tr><td>Header</td><td>Standard site header, not a transparent hero overlay.</td></tr>
+        <tr><td>CTA</td><td>None in the first viewport. Do not ask for contact before the institution is clear.</td></tr>
+      </table>
+      <h3 style="margin-top:14px;">Working copy</h3>
+      <p style="margin-top:6px;"><strong>Eyebrow.</strong> About</p>
+      <p style="margin-top:6px;"><strong>Statement.</strong> The institution behind the horizon.</p>
+      <p style="margin-top:6px;">TNT Capital is a long-term investment institution and venture builder. It allocates capital, develops original insights, and supports companies and people capable of building lasting value.</p>
+      <p style="margin-top:6px;">The outlook is global. The conviction is specific: Vietnam’s development is part of how TNT sees the long horizon. The firm is shown at the scale of the work it actually does.</p>
+    </div>
+  </div>
+  <span class="pageno">05</span>
+</section>
+
+<section class="page">
+  <div class="run"><span><b>TNT Capital</b> / About story + wireframe + narrative motion / v1</span><span>Desktop</span></div>
+  <h2>05 / The work</h2>
+  <p class="lede">One institution, four expressions. Not a services menu.</p>
+  <div class="frame mist">
+    <div class="label">What TNT does</div>
+    <div class="statement" style="margin-top:8px;">Four expressions of one firm.</div>
+    <div class="cols4">
+      <div class="cell"><b>01 Investing</b><span>Public and private markets. Judgment and allocation. No fund disclosure on this page.</span></div>
+      <div class="cell"><b>02 Insights</b><span>Research as a practice and a public record of how the institution thinks.</span></div>
+      <div class="cell"><b>03 Venture</b><span>Building and supporting companies while capability is still being formed.</span></div>
+      <div class="cell"><b>04 Partnerships</b><span>Selective work with institutions, founders, and operators.</span></div>
+    </div>
+  </div>
+  <div class="split" style="margin-top:14px;">
+    <table class="kv">
+      <tr><td>Height</td><td>About 100–120 svh. Readable in one hold. Not a pinned gallery.</td></tr>
+      <tr><td>Surface</td><td>TNT Mist.</td></tr>
+      <tr><td>Layout</td><td>Intro on the left, four positions across the lower frame. Each position is a rule plus a short paragraph, not a card, icon, or illustration.</td></tr>
+      <tr><td>Links</td><td>Investing, Insights, and Venture link to their pages. Partnerships links to Contact. Labels stay Source Sans, not serif UI.</td></tr>
+    </table>
+    <div>
+      <h3>Composition test</h3>
+      <p>The four positions should feel divided from one rule, the way the homepage rule divides into research windows — with a different meaning. Here the division is the institution’s work, not a set of questions. Equal visual weight. No “featured” pillar.</p>
+      <p class="note"><strong>Boundary.</strong> Do not describe fund size, investors, performance, holdings, or a private offering. Do not list ventures or articles here.</p>
+    </div>
+  </div>
+  <span class="pageno">06</span>
+</section>
+
+<section class="page">
+  <div class="run"><span><b>TNT Capital</b> / About story + wireframe + narrative motion / v1</span><span>Desktop</span></div>
+  <h2>06 / Principles</h2>
+  <p class="lede">Character of the firm. Related to investment judgment, and not the same sequence.</p>
+  <div class="split">
+    <div class="frame gray">
+      <div class="label">How TNT works</div>
+      <div class="statement" style="font-size:20px; margin:10px 0 8px;">Substance before scale.</div>
+      <div class="prow"><em>01</em><div><b>Discipline</b><span>Understand before acting. Activity is not evidence of seriousness.</span></div></div>
+      <div class="prow"><em>02</em><div><b>Integrity</b><span>Publish and present only what is true and already real.</span></div></div>
+      <div class="prow"><em>03</em><div><b>Competence</b><span>Research, judgment, and steady execution over appearance.</span></div></div>
+      <div class="prow"><em>04</em><div><b>Duration</b><span>Long horizons, including Vietnam, without pretending the firm is larger than it is.</span></div></div>
+    </div>
+    <div>
+      <table class="kv">
+        <tr><td>Height</td><td>About 100–115 svh.</td></tr>
+        <tr><td>Surface</td><td>Soft Gray.</td></tr>
+        <tr><td>Layout</td><td>5/7. Left: eyebrow, title, one sentence, link to Manifesto. Right: four principles, stacked, thin dividers, 01–04.</td></tr>
+        <tr><td>Imagery</td><td>None. Rules, type, and spacing carry the section.</td></tr>
+        <tr><td>Link</td><td>Manifesto, as the long form. This list is not the doctrine.</td></tr>
+      </table>
+      <p class="note"><strong>Distinct from Investment Management.</strong> The homepage investment sequence filters questions into allocation. This sequence filters appearance into character. Same family of restraint. Different subject. Do not reuse the three investment principles verbatim.</p>
+    </div>
+  </div>
+  <span class="pageno">07</span>
+</section>
+
+<section class="page">
+  <div class="run"><span><b>TNT Capital</b> / About story + wireframe + narrative motion / v1</span><span>Desktop</span></div>
+  <h2>07 / Founder</h2>
+  <p class="lede">Visible, so accountability has a name. Secondary, so the institution stays the subject.</p>
+  <div class="frame">
+    <div class="label">Founder</div>
+    <div class="cols2">
+      <div>
+        <div class="statement" style="font-size:20px;">Founder-led.<br>Not founder-centered.</div>
+        <div class="ghost" style="margin-top:14px;"></div>
+        <div class="ghost"></div>
+        <div class="ghost short"></div>
+        <div class="ghost" style="width:70%; margin-top:12px;"></div>
+        <div class="ghost short"></div>
+      </div>
+      <div class="portrait">Portrait slot<br>Only a real photograph</div>
+    </div>
+  </div>
+  <div class="split" style="margin-top:14px;">
+    <table class="kv">
+      <tr><td>Height</td><td>About 100–120 svh.</td></tr>
+      <tr><td>Surface</td><td>White.</td></tr>
+      <tr><td>Layout</td><td>7/5. Statement and biography on the left. Portrait on the right, rectangular, no circular crop, no decorative frame.</td></tr>
+      <tr><td>Slots</td><td>Name. Role: Founder. Two short paragraphs. Optional professional link. Link to Founder’s Notes.</td></tr>
+      <tr><td>Portrait</td><td>If no approved photograph exists, omit the image. Do not use a monogram, illustration, or stock figure.</td></tr>
+    </table>
+    <div>
+      <h3>Boundary line under the bio</h3>
+      <p>Personal voice belongs in Founder’s Notes. Everywhere else, TNT speaks as the institution.</p>
+      <p class="note"><strong>Order is fixed.</strong> Founder never precedes Arrival, The work, or Principles. A visitor who lands on a person-anchor still meets the institution first; do not offer a layout where the portrait is the hero.</p>
+    </div>
+  </div>
+  <span class="pageno">08</span>
+</section>
+
+<section class="page">
+  <div class="run"><span><b>TNT Capital</b> / About story + wireframe + narrative motion / v1</span><span>Desktop</span></div>
+  <h2>08 / People</h2>
+  <p class="lede">Real people are shown. An empty roster is omitted.</p>
+  <div class="pair">
+    <div>
+      <h3>State A — launch, founder only</h3>
+      <div class="omit">Section does not render.<br>No gap. No “team coming soon.”<br>Founder is the people chapter.</div>
+    </div>
+    <div>
+      <h3>State B — confirmed people exist</h3>
+      <div class="frame">
+        <div class="label">People</div>
+        <div class="statement" style="font-size:16px; margin-top:6px;">The people who are here.</div>
+        <div class="people">
+          <div class="person"><div class="ph"></div><b style="font-size:10px;">Name</b><span style="font-size:10px;color:#5F685F;">Role</span></div>
+          <div class="person"><div class="ph"></div><b style="font-size:10px;">Name</b><span style="font-size:10px;color:#5F685F;">Role</span></div>
+          <div class="person"><div class="ph"></div><b style="font-size:10px;">Name</b><span style="font-size:10px;color:#5F685F;">Advisor</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <table>
+    <thead><tr><th>Rule</th><th>Application</th></tr></thead>
+    <tbody>
+      <tr><td class="mode">Categories</td><td>Founder is already shown above. Further groups are only Team and Advisor, and only if at least one public person exists in that group.</td></tr>
+      <tr><td class="mode">Omit</td><td>Empty seats, open roles, fictional departments, offices, and “growing team” language.</td></tr>
+      <tr><td class="mode">Treatment</td><td>Quiet row. Name, role, optional short line, optional link. No org chart. No hover biographies that hide the fact of a small firm.</td></tr>
+      <tr><td class="mode">Photos</td><td>Real photographs only. A person may appear without a photo. A photo may not appear without a person.</td></tr>
+    </tbody>
+  </table>
+  <span class="pageno">09</span>
+</section>
+
+<section class="page">
+  <div class="run"><span><b>TNT Capital</b> / About story + wireframe + narrative motion / v1</span><span>Desktop</span></div>
+  <h2>09 / Invitation + footer</h2>
+  <p class="lede">The long horizon becomes a present way to approach the institution.</p>
+  <div class="frame dark">
+    <div class="label">Work with TNT</div>
+    <div class="rule"></div>
+    <div class="statement">When the fit is real.</div>
+    <div class="ghost"></div>
+    <div class="ghost short"></div>
+    <div class="cta">Contact</div>
+  </div>
+  <div class="footer-mini">
+    <div>TNT Capital<br>Line descriptor</div>
+    <div>Navigate</div>
+    <div>Contact</div>
+    <div>English / Vietnamese</div>
+  </div>
+  <div class="split">
+    <table class="kv">
+      <tr><td>Height</td><td>Invitation about 80–95 svh. Footer is content-height, static.</td></tr>
+      <tr><td>Surface</td><td>Dark Green, then White or Mist footer.</td></tr>
+      <tr><td>Copy</td><td>One headline. One short paragraph. One action: Contact.</td></tr>
+      <tr><td>Horizon</td><td>A low-contrast horizon line returns, same emotional register as the homepage close. Not a replay of the hero photograph.</td></tr>
+      <tr><td>Careers</td><td>No openings module unless a real role is approved for the public site. Do not reserve a blank row.</td></tr>
+    </table>
+    <div>
+      <h3>Working copy</h3>
+      <p><strong>Headline.</strong> When the fit is real.</p>
+      <p style="margin-top:6px;">A strategic partnership, an investment introduction, a company, or a research question. One path in.</p>
+      <p class="note"><strong>Inquiry types live on Contact,</strong> not as a second form here: strategic partnership, investment opportunity, founder or company introduction, research, media, general.</p>
+    </div>
+  </div>
+  <span class="pageno">10</span>
+</section>
+
+<section class="page">
+  <div class="run"><span><b>TNT Capital</b> / About story + wireframe + narrative motion / v1</span><span>Desktop</span></div>
+  <h2>10 / Scroll choreography</h2>
+  <p class="deck">The transitions are quieter than the homepage, and they still hand one object forward.</p>
+  <table>
+    <thead><tr><th>Transition</th><th>Visual shift</th><th>Story meaning</th></tr></thead>
+    <tbody>
+      <tr><td class="mode">Arrival holds</td><td>The editorial rule is already a line on White. The statement reveals by whitespace, not by a generic fade.</td><td>The world has already become structure. The page begins there.</td></tr>
+      <tr><td class="mode">Arrival → Work</td><td>The single rule extends, then divides into four measured segments over the four activities.</td><td>Identity becomes the work of the firm.</td></tr>
+      <tr><td class="mode">Work → Principles</td><td>The four segments lose equal spread. Spacing tightens. Four short rules restack into the 01–04 principle column. Mist resolves to Soft Gray.</td><td>Activity becomes character. Noise drops.</td></tr>
+      <tr><td class="mode">Principles → Founder</td><td>The principle column releases. One remaining rule moves to the top of the founder block and sets the width of the biography, not the portrait.</td><td>Character acquires a name. The person sits inside the structure.</td></tr>
+      <tr><td class="mode">Founder → People</td><td>If people exist, the rule opens into a short row of real names. If not, the rule travels on toward the close with no empty interval.</td><td>The institution is only as peopled as it is.</td></tr>
+      <tr><td class="mode">Close</td><td>White releases into Dark Green. A low horizon returns. Motion slows until only Contact is interactive.</td><td>Identity becomes an invitation.</td></tr>
+      <tr><td class="mode">Footer</td><td>Dark field releases into a static utility footer.</td><td>The page resolves into the institution.</td></tr>
+    </tbody>
+  </table>
+  <p class="note"><strong>Pace.</strong> Do not pin Arrival, The work, or Principles. The visitor should be able to read each chapter without fighting a scrub. If a handoff makes type move under the eye, drop the transform and keep the incoming rule in the right place.</p>
+  <span class="pageno">11</span>
+</section>
+
+<section class="page">
+  <div class="run"><span><b>TNT Capital</b> / About story + wireframe + narrative motion / v1</span><span>Desktop</span></div>
+  <h2>11 / Blueprint</h2>
+  <p class="deck">About at a glance.</p>
+  <table>
+    <thead><tr><th>Section</th><th>Space / surface</th><th>Feeling</th></tr></thead>
+    <tbody>
+      <tr><td class="mode">Header</td><td>Standard / White or Mist</td><td>Quiet authority. Not a hero overlay.</td></tr>
+      <tr><td class="mode">Arrival</td><td>90–105 svh / White / settled rule</td><td>The institution</td></tr>
+      <tr><td class="mode">The work</td><td>100–120 svh / Mist / four segments</td><td>The structure of the work</td></tr>
+      <tr><td class="mode">Principles</td><td>100–115 svh / Soft Gray / stacked 01–04</td><td>The character</td></tr>
+      <tr><td class="mode">Founder</td><td>100–120 svh / White / 7/5</td><td>Accountability</td></tr>
+      <tr><td class="mode">People</td><td>Omitted, or about 70–90 svh / White</td><td>Presence, or absence of pretense</td></tr>
+      <tr><td class="mode">Invitation</td><td>80–95 svh / Dark Green / returned horizon</td><td>The invitation</td></tr>
+      <tr><td class="mode">Footer</td><td>Content-driven / White or Mist</td><td>The grounding</td></tr>
+    </tbody>
+  </table>
+  <div class="test"><b>Final screen test.</b> A visitor who reads only the statements should leave knowing four things: TNT is a long-term investment institution and venture builder; the work is investing, insights, venture, and selective partnership; the firm will not appear larger than it is; a named founder is accountable, and contact is one clear path.</div>
+  <span class="pageno">12</span>
+</section>
+
+<section class="page">
+  <div class="run"><span><b>TNT Capital</b> / About story + wireframe + narrative motion / v1</span><span>Desktop</span></div>
+  <h2>12 / Narrative motion system</h2>
+  <p class="deck">The page moves as one argument about identity. 2045 is not restaged. The motion explains how a horizon becomes a firm, and how a firm keeps a human scale.</p>
+  <table>
+    <thead><tr><th>Chapter</th><th>Visual object</th><th>Transformation</th><th>Meaning</th></tr></thead>
+    <tbody>
+      <tr><td class="mode">Arrival</td><td>Editorial rule</td><td>Holds, then extends</td><td>Structure is the starting condition.</td></tr>
+      <tr><td class="mode">The work</td><td>Four segments</td><td>One rule divides evenly</td><td>The institution has four expressions, one weight.</td></tr>
+      <tr><td class="mode">Principles</td><td>Stacked rules</td><td>Segments tighten and restack</td><td>Work is held to character.</td></tr>
+      <tr><td class="mode">Founder</td><td>One remaining rule</td><td>Sets the measure of the biography</td><td>A person is placed inside the institution.</td></tr>
+      <tr><td class="mode">People</td><td>The same rule</td><td>Opens into real names, or does not</td><td>Scale equals reality.</td></tr>
+      <tr><td class="mode">Invitation</td><td>Returned horizon</td><td>Settles into stillness</td><td>Identity becomes a present invitation.</td></tr>
+    </tbody>
+  </table>
+  <div class="pair">
+    <div>
+      <h3>Primary motion</h3>
+      <p>Section-to-section transformation of the rule. This carries the story.</p>
+    </div>
+    <div>
+      <h3>Secondary motion</h3>
+      <p>Statement reveal by mask or whitespace. Surface change between White, Mist, Soft Gray, and Dark Green. Nothing else.</p>
+    </div>
+  </div>
+  <p class="note"><strong>Not in this system.</strong> Parallax landscapes, counting numbers, logo draws, staggered card fly-ins, portrait zoom, and any motion that makes a small team feel like a large one.</p>
+  <span class="pageno">13</span>
+</section>
+
+<section class="page">
+  <div class="run"><span><b>TNT Capital</b> / About story + wireframe + narrative motion / v1</span><span>Desktop</span></div>
+  <h2>13 / Cursor</h2>
+  <p class="deck">Same observation tool as the homepage, used less. About is a reading page. The cursor should almost disappear into the text.</p>
+  <table>
+    <thead><tr><th>State</th><th>Behavior</th></tr></thead>
+    <tbody>
+      <tr><td class="mode">Default</td><td>10–12 px circle. Dark Green on light surfaces. Mist on Dark Green. Immediate tracking, minimal lag.</td></tr>
+      <tr><td class="mode">Navigation and links</td><td>Expand 3–5 px with a slight magnetic pull. Exact, not playful. Nav underline remains the Koi Red 1 px rule from the design system. The cursor does not replace it.</td></tr>
+      <tr><td class="mode">Body and principles</td><td>Stay at the basic circle. No highlight trails through paragraphs.</td></tr>
+      <tr><td class="mode">Founder portrait</td><td>If a real photograph is present, a slight ring and a 3–4 px crop response. Examination, not a magnifying glass. No tilt.</td></tr>
+      <tr><td class="mode">People photos</td><td>Same quiet crop response, only inside an actual photograph.</td></tr>
+      <tr><td class="mode">Invitation</td><td>Return to the basic circle. Contact is the only emphasis, and it is a button, not a cursor trick.</td></tr>
+    </tbody>
+  </table>
+  <div class="test"><b>Removal test.</b> If the custom cursor is turned off, the About story must still be complete. Cursor work starts only after the rule handoffs read clearly.</div>
+  <span class="pageno">14</span>
+</section>
+
+<section class="page">
+  <div class="run"><span><b>TNT Capital</b> / About story + wireframe + narrative motion / v1</span><span>Desktop</span></div>
+  <h2>14 / Arrival and the work</h2>
+  <p class="lede">Structure first. Then the structure shows what the firm does.</p>
+  <div class="pair">
+    <div>
+      <h3>Arrival</h3>
+      <table class="kv">
+        <tr><td>Entrance</td><td>Header is the normal site header. The rule is already on the page. The statement is the first motion: it clears into the whitespace under the rule.</td></tr>
+        <tr><td>Hold</td><td>No pin. The visitor can read both paragraphs without a scroll lock.</td></tr>
+        <tr><td>Exit</td><td>Near the end of the viewport, the rule lengthens across the content frame, preparing the four-way division.</td></tr>
+      </table>
+    </div>
+    <div>
+      <h3>The work</h3>
+      <table class="kv">
+        <tr><td>Divide</td><td>The lengthened rule splits into four segments of equal length. They settle above Investing, Insights, Venture, and Partnerships.</td></tr>
+        <tr><td>Copy</td><td>The section title arrives with the split, not after a finished diagram. The idea and the object appear together.</td></tr>
+        <tr><td>Links</td><td>Each activity can be entered. The split itself is not a control.</td></tr>
+      </table>
+    </div>
+  </div>
+  <div class="test"><b>Story test.</b> The visitor should feel that TNT’s work is a division of one institution, not a catalog they are being sold. Four equal segments. No card shadow. No icon set.</div>
+  <p class="note"><strong>Homepage continuity.</strong> On the homepage, one rule fractures into six research windows: one worldview, many questions. On About, one rule divides into four activities: one firm, the work it does. Do not reuse the six-window motif here. The counts mean different things.</p>
+  <span class="pageno">15</span>
+</section>
+
+<section class="page">
+  <div class="run"><span><b>TNT Capital</b> / About story + wireframe + narrative motion / v1</span><span>Desktop</span></div>
+  <h2>15 / Principles and founder</h2>
+  <p class="lede">The work is held to a standard. Then the standard has a name.</p>
+  <div class="pair">
+    <div>
+      <h3>Principles</h3>
+      <table class="kv">
+        <tr><td>Set-up</td><td>Four segments are still in a row as The work ends.</td></tr>
+        <tr><td>Tighten</td><td>They shorten, move into the right-hand column, and restack in order 01–04. Peripheral space opens. Soft Gray replaces Mist.</td></tr>
+        <tr><td>Reading</td><td>Each principle is fully readable when it settles. No line may be decorative-only. If the restack fights the type, show the stacked list already in place and skip the travel.</td></tr>
+      </table>
+    </div>
+    <div>
+      <h3>Founder</h3>
+      <table class="kv">
+        <tr><td>Release</td><td>The stacked rules recede. One rule remains and moves to the measure of the biography column.</td></tr>
+        <tr><td>Portrait</td><td>The photograph, if it exists, is already in the frame. It does not slide in from off-screen and it does not scale up to fill the viewport.</td></tr>
+        <tr><td>Boundary</td><td>The Founder’s Notes line appears last, after the biography, as a quiet rule of voice — not as a caption on the portrait.</td></tr>
+      </table>
+    </div>
+  </div>
+  <div class="test"><b>Story test.</b> Cover the portrait. The section should still read as an institution that is founder-led. Cover the name. The previous chapters should still have explained TNT. Both tests pass only if the founder is accountable and not the subject of the page.</div>
+  <span class="pageno">16</span>
+</section>
+
+<section class="page">
+  <div class="run"><span><b>TNT Capital</b> / About story + wireframe + narrative motion / v1</span><span>Desktop</span></div>
+  <h2>16 / People, invitation, collapse</h2>
+  <p class="lede">The page must look finished when almost nothing personal is public yet.</p>
+  <table>
+    <thead><tr><th>Condition</th><th>What the visitor sees</th><th>Motion</th></tr></thead>
+    <tbody>
+      <tr><td class="mode">Founder only</td><td>Founder chapter ends. Invitation begins. No blank band, no placeholder tiles, no “advisors” heading.</td><td>The remaining rule travels from the biography measure into the Dark Green horizon. One move, no pause for missing people.</td></tr>
+      <tr><td class="mode">Team or advisors exist</td><td>A short White continuation. Group label only for a non-empty group. Names in display order.</td><td>The rule opens horizontally just enough to sit over the row, then continues to the close. No stagger that implies a larger cast waiting off-screen.</td></tr>
+      <tr><td class="mode">Person hidden in CMS</td><td>Treated as absent. Layout reflows. No reserved gap.</td><td>None beyond the reflow.</td></tr>
+      <tr><td class="mode">Invitation</td><td>Dark Green. Headline, one paragraph, Contact. Low horizon.</td><td>Surface change and a settling horizon. Then stillness.</td></tr>
+      <tr><td class="mode">Footer</td><td>Shared site footer.</td><td>None.</td></tr>
+    </tbody>
+  </table>
+  <div class="test"><b>Launch test.</b> With only a founder biography and no portrait, no team, and no advisors, the page still feels complete: Arrival, The work, Principles, Founder, Invitation, Footer. Completeness comes from judgment about what to omit.</div>
+  <span class="pageno">17</span>
+</section>
+
+<section class="page">
+  <div class="run"><span><b>TNT Capital</b> / About story + wireframe + narrative motion / v1</span><span>Desktop</span></div>
+  <h2>17 / Responsive and prototype order</h2>
+  <p class="deck">Preserve the story when the choreography simplifies.</p>
+  <table>
+    <thead><tr><th>Condition</th><th>Rule</th></tr></thead>
+    <tbody>
+      <tr><td class="mode">Pointer desktop</td><td>Full rule handoff. Custom cursor only after the handoffs work.</td></tr>
+      <tr><td class="mode">Tablet</td><td>Same chapter order. Four activities may wrap 2×2. Founder stacks portrait under the biography. No custom cursor.</td></tr>
+      <tr><td class="mode">Mobile</td><td>Same chapter order, single column. The rule remains a short horizontal mark at the head of each chapter. No parallax. People, if any, stack.</td></tr>
+      <tr><td class="mode">Reduced motion</td><td>No travel of the rule. Each chapter opens in its resolved layout. Surface changes may fade briefly. Copy and order stay identical.</td></tr>
+      <tr><td class="mode">Keyboard</td><td>Visible focus on header, activity links, Manifesto, Founder’s Notes, people links, and Contact. Independent of cursor and scroll.</td></tr>
+    </tbody>
+  </table>
+  <h3 style="margin-top:16px;">Prototype order</h3>
+  <table>
+    <thead><tr><th></th><th>Prototype</th><th>Pass condition</th></tr></thead>
+    <tbody>
+      <tr><td class="num">01</td><td>Arrival on White</td><td>Reads as an institution, including on a direct visit with no homepage memory.</td></tr>
+      <tr><td class="num">02</td><td>Four-way division</td><td>Feels like one firm, not four cards, and not the homepage’s six research windows.</td></tr>
+      <tr><td class="num">03</td><td>Principles restack</td><td>Reads as character, distinct from the investment filtering sequence.</td></tr>
+      <tr><td class="num">04</td><td>Founder after the institution</td><td>Portrait never leads. Page still works with the portrait removed.</td></tr>
+      <tr><td class="num">05</td><td>Empty people and careers</td><td>Both collapse with no gap and no apology.</td></tr>
+      <tr><td class="num">06</td><td>Invitation</td><td>Horizon returns, motion stops, Contact is the only action.</td></tr>
+    </tbody>
+  </table>
+  <span class="pageno">18</span>
+</section>
+
+<section class="page">
+  <div class="run"><span><b>TNT Capital</b> / About story + wireframe + narrative motion / v1</span><span>Desktop</span></div>
+  <h2>18 / Content boundaries</h2>
+  <p class="deck">The layout is not allowed to imply a firm that the content does not support.</p>
+  <div class="pair">
+    <div>
+      <h3>Publish</h3>
+      <ul class="clean">
+        <li>Who TNT is, in institutional language</li>
+        <li>The four activities, without performance or fund detail</li>
+        <li>Short principles, with Manifesto as the long form</li>
+        <li>A real founder name, role, and approved biography</li>
+        <li>Team and advisors who are public and current</li>
+        <li>One contact path</li>
+        <li>English and Vietnamese as separate writing, not a mirrored translation</li>
+      </ul>
+    </div>
+    <div>
+      <h3>Do not publish</h3>
+      <ul class="clean">
+        <li>Fund size, structure, investors, or private performance</li>
+        <li>Holdings and internal reporting</li>
+        <li>Offices, departments, or headcount that do not exist</li>
+        <li>Empty team categories or fictional advisors</li>
+        <li>A careers grid with no approved role</li>
+        <li>Personal-brand framing that puts the founder ahead of TNT</li>
+        <li>Automatic Vietnamese pasted under English sentences</li>
+      </ul>
+    </div>
+  </div>
+  <table>
+    <thead><tr><th>Slot</th><th>Source</th><th>Until it exists</th></tr></thead>
+    <tbody>
+      <tr><td class="mode">Founder name and bio</td><td>Approved profile. English and Vietnamese written separately.</td><td>Keep the chapter structure. Mark the biography as unpublished. Do not invent a life story in the layout.</td></tr>
+      <tr><td class="mode">Portrait</td><td>Approved photograph.</td><td>Omit the image area entirely.</td></tr>
+      <tr><td class="mode">Team / advisor</td><td>Team member records set to public.</td><td>Omit the People section.</td></tr>
+      <tr><td class="mode">Open role</td><td>An approved public opening.</td><td>Omit. Contact remains the path.</td></tr>
+    </tbody>
+  </table>
+  <div class="test"><b>Success test.</b> If every motion is removed, About still tells a complete story through order, omission, and composition: institution, work, character, accountable founder, and a single way in.</div>
+  <span class="pageno">19</span>
+</section>
+
+</body>
+</html>

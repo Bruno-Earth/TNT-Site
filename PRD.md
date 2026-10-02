@@ -19,7 +19,7 @@
 
 ### What is the TNT Capital Website?
 
-The TNT Capital website is the public-facing digital platform for TNT Capital. It is designed to present TNT as a long-term investment institution and venture builder focused on disciplined capital allocation, original thinking, entrepreneurship, and Vietnam's long-term development.
+The TNT Capital website is the public-facing digital platform for TNT Capital. It is designed to present TNT as a long-term investment institution and venture builder focused on disciplined capital allocation, original Insights, entrepreneurship, and Vietnam's long-term development.
 
 The website should help visitors understand:
 
@@ -30,7 +30,7 @@ The website should help visitors understand:
 - Who is behind the institution
 - How to contact or work with TNT
 
-The website is not only an introduction to the firm. It is also a publishing platform for research, investment thinking, market analysis, institutional principles, and long-term ideas.
+The website is not only an introduction to the firm. It is also a publishing platform for research, investment Insights, market analysis, institutional principles, and long-term ideas.
 
 ---
 
@@ -42,7 +42,7 @@ Without a clear website:
 
 - Visitors may not understand what TNT Capital does
 - The relationship between investing, research, and venture building may feel unclear
-- Research and institutional thinking may remain scattered across different platforms
+- Research and institutional Insights may remain scattered across different platforms
 - Strategic partners and founders may not know how to approach TNT
 - The institution may appear less established or less focused than it actually is
 - The public may confuse TNT Capital with a personal investment project rather than a serious long-term institution
@@ -53,10 +53,13 @@ Without a clear website:
 
 The website will bring TNT Capital's major activities into one structured platform. The main areas are:
 
-- Asset Management
-- Thinking
-- Ventures
-- Team
+- Vietnam 2045
+- About
+- Insights
+- Investment Management
+- Venture
+- Manifesto
+- Contact
 
 The website will explain TNT's investment activity without disclosing private fund information, confidential holdings, investor information, or internal performance. It will also provide a publishing system for research and articles in both **English** and **Vietnamese**.
 
@@ -68,11 +71,11 @@ The website should:
 
 - Establish TNT Capital's institutional credibility
 - Clearly explain TNT's investment and venture-building activities
-- Publish high-quality research and long-term thinking
+- Publish high-quality research and long-term Insights
 - Present selected investments and ventures
 - Attract strategic partners and long-term investors
 - Provide founders and operators with a clear way to contact TNT
-- Build a consistent public record of TNT's thinking and development
+- Build a consistent public record of TNT's Insights and development
 - Present Vietnam as an important part of TNT's global perspective
 
 ---
@@ -98,7 +101,7 @@ When a visitor enters the website, they should immediately understand that TNT C
 - A venture builder
 - Globally oriented
 - Deeply interested in Vietnam's development
-- Driven by discipline, integrity, research, and long-term thinking
+- Driven by discipline, integrity, research, and long-term Insights
 
 The first impression should feel **calm, structured, modern, and credible**.
 
@@ -114,29 +117,30 @@ The website should not feel like:
 
 ### Homepage Experience
 
-The homepage should introduce TNT Capital at an institutional level. Visitors should be able to understand the firm through four main areas:
+The homepage should introduce TNT Capital at an institutional level. Primary navigation and homepage modules follow the live redesign IA:
 
-1. Asset Management
-2. Thinking
-3. Ventures
-4. Team
+1. Vietnam 2045
+2. About
+3. Insights
+4. Investment Management
+5. Venture
+6. Manifesto
+7. Contact
 
 The homepage should also include:
 
-- A clear institutional introduction
-- TNT's global perspective and Vietnam conviction
-- Featured research or articles
-- Selected investments or ventures
-- A brief introduction to the team
+- A clear institutional introduction anchored on Vietnam 2045
+- Featured Insights research
+- Investment Management and Venture introductions
 - A clear contact option
 
-> The About content should be integrated into the homepage and Team section rather than existing as a separate top-level page.
+> About is a top-level destination in the current redesign. Team content may live under About rather than as its own top-level nav item.
 
 ---
 
-### Asset Management Experience
+### Investment Management Experience
 
-Visitors entering Asset Management should understand:
+Visitors entering Investment Management should understand:
 
 - How TNT approaches investing
 - What types of opportunities TNT studies
@@ -158,9 +162,9 @@ The page should describe real investment activity without mentioning the private
 
 ---
 
-### Thinking Experience
+### Insights Experience
 
-Thinking should function as TNT Capital's publishing platform. Visitors should be able to explore:
+Insights should function as TNT Capital's publishing platform. Visitors should be able to explore:
 
 - Research
 - Investment memos
@@ -170,15 +174,15 @@ Thinking should function as TNT Capital's publishing platform. Visitors should b
 - Vietnam 2045
 - TNT Capital Doctrine
 
-The publishing system should feel deliberate and selective. TNT is not a media company and does not need to publish daily. Each publication should reflect meaningful research, institutional thinking, or a clear point of view.
+The publishing system should feel deliberate and selective. TNT is not a media company and does not need to publish daily. Each publication should reflect meaningful research, institutional Insights, or a clear point of view.
 
-> **Vietnam 2045** and the **TNT Capital Doctrine** should be treated as cornerstone publications rather than ordinary articles.
+> **Vietnam 2045** and the **Manifesto** (institutional doctrine) should be treated as cornerstone publications rather than ordinary articles.
 
 ---
 
-### Ventures Experience
+### Venture Experience
 
-Visitors entering Ventures should understand:
+Visitors entering Venture should understand:
 
 - What companies or projects TNT has built
 - What companies TNT supports
@@ -193,6 +197,8 @@ Only active or publicly presentable ventures should appear. Unlaunched concepts,
 ### Team Experience
 
 The Team section should present TNT as founder-led while keeping the institution as the central identity. The founder should be visible, but the website should not feel centered around a personal brand.
+
+In the current redesign, Team content may be presented within **About** rather than as a separate top-level navigation item.
 
 The Team section may include:
 
@@ -243,7 +249,7 @@ Strategic partners are the highest-priority audience. These may include:
 
 - Understanding TNT's credibility
 - Understanding TNT's long-term direction
-- Reviewing TNT's thinking and institutional principles
+- Reviewing TNT's Insights and institutional principles
 - Identifying areas for collaboration
 - Contacting TNT directly
 
@@ -300,7 +306,7 @@ Founders and operators should be able to understand:
 
 #### General Public
 
-The website should remain understandable to the general public, but it should not be designed primarily for mass attention. The language should be clear and accessible without oversimplifying the institution's thinking.
+The website should remain understandable to the general public, but it should not be designed primarily for mass attention. The language should be clear and accessible without oversimplifying the institution's Insights.
 
 ---
 
@@ -311,12 +317,16 @@ The website should remain understandable to the general public, but it should no
 ```
 TNT Capital
 ├── Home
-├── Asset Management
-├── Thinking
-├── Ventures
-├── Team
+├── Vietnam 2045
+├── About
+├── Insights
+├── Investment Management
+├── Venture
+├── Manifesto
 └── Contact
 ```
+
+Legacy label map (do not mix in UI): Thinking → Insights; Asset Management → Investment Management; Ventures → Venture; Doctrine → Manifesto. Team content may live under About.
 
 A language selector should allow visitors to switch between:
 - 🇺🇸 English
@@ -334,24 +344,24 @@ Home
 │   └── Vietnam conviction
 │
 ├── Core Areas
-│   ├── Asset Management
-│   ├── Thinking
-│   ├── Ventures
-│   └── Team
+│   ├── Investment Management
+│   ├── Insights
+│   ├── Venture
+│   └── About (incl. Team)
 │
-├── Featured Thinking
-├── Selected Portfolio or Ventures
+├── Featured Insights
+├── Selected Portfolio or Venture
 ├── Vietnam 2045
-├── Institutional Principles
+├── Manifesto
 └── Contact Call to Action
 ```
 
 ---
 
-### Asset Management Structure
+### Investment Management Structure
 
 ```
-Asset Management
+Investment Management
 ├── Overview
 ├── Investment Philosophy
 ├── Investment Approach
@@ -364,10 +374,10 @@ Asset Management
 
 ---
 
-### Thinking Structure
+### Insights Structure
 
 ```
-Thinking
+Insights
 ├── All Publications
 ├── Research
 ├── Investment Memos
@@ -375,17 +385,17 @@ Thinking
 ├── Essays
 ├── Founder's Notes
 ├── Vietnam 2045
-└── TNT Capital Doctrine
+└── Manifesto
 ```
 
 ---
 
-### Ventures Structure
+### Venture Structure
 
 ```
-Ventures
+Venture
 ├── Overview
-├── Active Ventures
+├── Active ventures
 ├── Portfolio Companies
 ├── Venture-Building Approach
 └── Work With TNT
@@ -393,10 +403,10 @@ Ventures
 
 ---
 
-### Team Structure
+### About / Team Structure
 
 ```
-Team
+About
 ├── Who We Are
 ├── Founder
 ├── Team Members
@@ -416,12 +426,12 @@ Team
 1. Visitor enters the homepage
 2. Visitor reads the institutional introduction
 3. Visitor reviews the four main areas
-4. Visitor opens Asset Management, Thinking, Ventures, or Team
+4. Visitor opens Investment Management, Insights, Ventures, or Team
 5. Visitor develops a clear understanding of TNT's identity and activities
 
 #### Flow 2 — Reading Research
 
-1. Visitor opens Thinking
+1. Visitor opens Insights
 2. Visitor browses publications by category
 3. Visitor opens an article
 4. Visitor reads the publication
@@ -430,7 +440,7 @@ Team
 
 #### Flow 3 — Reviewing Investment Activity
 
-1. Visitor opens Asset Management
+1. Visitor opens Investment Management
 2. Visitor reads TNT's investment philosophy and approach
 3. Visitor reviews public-market or private-market activity
 4. Visitor views selected investments when available
@@ -478,7 +488,7 @@ Team
 - Contact call to action
 - English and Vietnamese language switching
 
-#### Asset Management
+#### Investment Management
 
 - Investment philosophy
 - Investment approach
@@ -489,7 +499,7 @@ Team
 - Long-term orientation
 - Selected investments when approved for public display
 
-#### Thinking
+#### Insights
 
 - Publication library
 - Publication categories
@@ -610,49 +620,50 @@ The MVP will **not** include:
 
 ### Visual Direction
 
-The website should feel:
+The visual system is defined in [`design.md`](./design.md) (Core Visual System v1.0) and is **finalized**. Do not invent page-level colors, fonts, or surfaces outside that document.
 
-- Minimal
-- Modern
-- Structured
-- Calm
-- Credible
-- Institutional
-- Thoughtful
+The website should feel intentional, institutional, editorial, calm, and recognizably TNT through the green hierarchy.
 
-The dominant visual tone should use **off-white backgrounds**. The final color system may continue evolving, but the website should use:
+**Locked anchors** (full tokens in `design.md`):
 
-- Restrained colors
-- Strong contrast
-- Clear hierarchy
-- Generous spacing
-- Minimal decoration
-- Purposeful imagery
+| Role | Value |
+|------|-------|
+| Primary / Dark Green | `#275317` |
+| Secondary / Military Green | `#4D6345` |
+| Light brand surface / TNT Mist | `#F5FFF9` |
+| Line accent / Koi Red | `#E0563A` (underlines and hairline rules only — never type) |
+| Body text / Text Ink | `#202820` |
+| Neutral surface / Soft Gray | `#F2F5F1` |
+| Border | `#DFE5DC` |
+| Heading family (H1–H3) | Source Serif 4, 600 |
+| Body / UI family | Source Sans 3, 400–600 |
+| Default body size | 18 px desktop / 17 px mobile |
+
+Approved section surfaces: White, TNT Mist, Soft Gray, Dark Green only. Military Green is secondary emphasis — not a default full-section background.
 
 **The website should avoid:**
 
-- Luxury-coded design
-- Gold-heavy visual language
-- Excessive animation
+- Gold, blue, magenta, or any accent outside `design.md`
+- Treating Military Green as equal to Dark Green
+- Luxury-coded or gold-heavy visual language
+- Excessive animation and loud gradients
 - Technology-startup aesthetics
-- Loud gradients
-- Visual clutter
-- Generic corporate stock photography
+- Visual clutter and generic corporate stock photography
 - Dense financial dashboards on the public site
+- One-off heading colors or section backgrounds
 
 ---
 
 ### Typography
 
-Typography should be:
+Follow the hybrid system in `design.md`:
 
-- Clear
-- Modern
-- Highly readable
-- Suitable for long research articles
-- Consistent across English and Vietnamese
+- **Source Serif 4** for display, H1–H3, article titles, and pull quotes
+- **Source Sans 3** for H4–H5, body, navigation, buttons, tables, forms, and metadata
+- Default reading size **18 px desktop / 17 px mobile**; 14 px for captions and metadata only
+- Do not use serif for navigation, forms, dense tables, or small UI labels
 
-> Vietnamese characters must display correctly across all supported fonts and devices.
+> Vietnamese characters must display correctly. Source Serif 4 and Source Sans 3 are the approved bilingual families.
 
 ---
 
@@ -746,12 +757,12 @@ tntcapital.com/vi/   ← Vietnamese
 
 ### Positioning
 
-TNT Capital is a long-term investment institution and venture builder that allocates capital, develops original thinking, and supports companies and individuals capable of building lasting value.
+TNT Capital is a long-term investment institution and venture builder that allocates capital, develops original Insights, and supports companies and individuals capable of building lasting value.
 
 The website should position TNT through four connected activities:
 
 1. **Investing**
-2. **Research and thinking**
+2. **Research and Insights**
 3. **Venture building**
 4. **Long-term partnerships**
 
@@ -768,7 +779,7 @@ The website should communicate that TNT:
 - Values discipline, integrity, competence, and steady execution
 - Invests across public and private markets
 - Builds and supports ventures
-- Publishes original research and institutional thinking
+- Publishes original research and institutional Insights
 - Views Vietnam as an important long-term strategic opportunity
 - Is open to credible strategic partnerships and investment opportunities
 
@@ -798,7 +809,7 @@ The website should distinguish between:
 |----------|-------------|
 | **Formal investment activity** | TNT Capital's managed investment operations |
 | **Active ventures** | Companies or projects TNT has built or formally supports |
-| **Published thinking** | Institutional research, analysis, and frameworks |
+| **Published Insights** | Institutional research, analysis, and frameworks |
 | **Founder's personal opinion** | Personal voice, expressed only in Founder's Notes |
 
 > Founder's Notes may contain a more personal voice, but all other institutional publications should follow TNT Capital's structured and analytical tone.
@@ -830,5 +841,7 @@ The website should grow alongside TNT Capital.
 ---
 
 *Document version: MVP*  
-*Last updated: June 2026*  
+*Last updated: September 2026*  
+*Design source of truth: [`design.md`](./design.md) Core Visual System v1.0*  
+*Live redesign reference: Cloudflare preview (homepage IA + tokens)*  
 *TNT Capital — Internal Use*

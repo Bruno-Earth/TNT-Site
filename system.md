@@ -1,7 +1,9 @@
 # System Design — TNT Capital Website
 
-**Version:** 1.0  
+**Version:** 1.1  
 **Status:** Provisional — subject to change as the build develops
+
+> **Current build path (overrides older Next.js/Vercel assumptions below until this doc is rewritten):** design and assemble in **Framer** with **Cursor connected to Framer**; final production publish onto TNT’s existing **WordPress** server. See [`planning.md`](./planning.md) Build Path and [`design.md`](./design.md) for visual tokens.
 
 ---
 
